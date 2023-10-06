@@ -8,5 +8,11 @@
   },
   "action": {
     "default_popup": "./dist"
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "./dist/contextMenu.js"
   }
 }
