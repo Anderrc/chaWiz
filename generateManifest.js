@@ -10,8 +10,8 @@ const manifest = {
   "manifest_version": 3,
   "name": "ChaWiz",
   "version": "1.0",
-  "description": "Con ChaWiz, optimiza tu flujo de trabajo y ahorra tiempo al realizar tareas relacionadas con el manejo de caracteres. Ya sea que seas un desarrollador, un escritor o un editor de contenido, ChaWiz es una herramienta versátil que te ayudará a mejorar la eficiencia y la calidad de tus textos.",
-  "permissions": ["contextMenus"],
+  "description": "Optimiza tu flujo con ChaWiz para tareas de manejo de caracteres. Desarrollador, escritor o editor, mejora eficiencia y calidad.",
+  "permissions": [],
   "icons": {
     "128": "./logo.png"
   },
@@ -20,7 +20,7 @@ const manifest = {
   },
   "background": {
     "service_worker": "./contextMenu.js"
-  }
+  },
 };
 
 createTextFile(manifest, './dist/manifest.json');

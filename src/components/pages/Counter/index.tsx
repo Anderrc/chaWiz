@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-export const Counter = () => {
+export default function Counter() {
 	const [cantWords, setCantWords] = useState(0);
 	const [cantCharacters, setCantCharacters] = useState(0);
 	const [cantSpaces, setCantSpaces] = useState(0);
@@ -86,4 +86,4 @@ export const Counter = () => {
 			</div>
 		</div>
 	);
-};
+}

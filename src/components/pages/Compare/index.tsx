@@ -5,47 +5,47 @@ const CompareTexts = () => {
 	const [text1, setText1] = useState('');
 	const [text2, setText2] = useState('');
 
-	const compareTexts = () => {
-		const lines1 = text1.split('\n');
-		const lines2 = text2.split('\n');
+	// const compareTexts = () => {
+	// 	const lines1 = text1.split('\n');
+	// 	const lines2 = text2.split('\n');
 
-		const maxLength = Math.max(lines1.length, lines2.length);
+	// 	const maxLength = Math.max(lines1.length, lines2.length);
 
-		const comparedTexts = [];
+	// 	const comparedTexts = [];
 
-		for (let i = 0; i < maxLength; i++) {
-			const line1 = lines1[i] || '';
-			const line2 = lines2[i] || '';
+	// 	for (let i = 0; i < maxLength; i++) {
+	// 		const line1 = lines1[i] || '';
+	// 		const line2 = lines2[i] || '';
 
-			const className =
-				line1 === line2
-					? 'text-green'
-					: line1.trim() === line2.trim()
-					? 'text-yellow'
-					: 'text-red';
+	// 		const className =
+	// 			line1 === line2
+	// 				? 'text-green'
+	// 				: line1.trim() === line2.trim()
+	// 				? 'text-yellow'
+	// 				: 'text-red';
 
-			comparedTexts.push(
-				<div
-					key={i}
-					className={`grid grid-cols-2 p-2 gap-2 items-center border-b-1 border-primary ${className} `}>
-					<div className='flex overflow-auto border-primary'>
-						<span className='font-mono w-3 text-xs mr-3 text-primary'>
-							{i + 1}
-						</span>
-						<div className='w-full resize-none'>{line1}</div>
-					</div>
-					<div className='flex overflow-auto'>
-						<span className='font-mono w-3 text-xs mr-3 text-primary'>
-							{i + 1}
-						</span>
-						<div className='w-full resize-none'>{line2}</div>
-					</div>
-				</div>,
-			);
-		}
+	// 		comparedTexts.push(
+	// 			<div
+	// 				key={i}
+	// 				className={`grid grid-cols-2 p-2 gap-2 items-center border-b-1 border-primary ${className} `}>
+	// 				<div className='flex overflow-auto border-primary'>
+	// 					<span className='font-mono w-3 text-xs mr-3 text-primary'>
+	// 						{i + 1}
+	// 					</span>
+	// 					<div className='w-full resize-none'>{line1}</div>
+	// 				</div>
+	// 				<div className='flex overflow-auto'>
+	// 					<span className='font-mono w-3 text-xs mr-3 text-primary'>
+	// 						{i + 1}
+	// 					</span>
+	// 					<div className='w-full resize-none'>{line2}</div>
+	// 				</div>
+	// 			</div>,
+	// 		);
+	// 	}
 
-		return comparedTexts;
-	};
+	// 	return comparedTexts;
+	// };
 
 	return (
 		<div className='container mx-auto py-8 '>
@@ -98,7 +98,10 @@ const CompareTexts = () => {
 					Comparación
 				</h2>
 				<div className='grid  rounded-xl bg-white'>
-					{compareTexts()}
+					{/* {compareTexts()} */}
+					{text1 === text2
+						? 'Los textos son iguales'
+						: 'Los textos son diferentes'}
 				</div>
 			</div>
 		</div>
