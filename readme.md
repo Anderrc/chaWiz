@@ -20,7 +20,7 @@ Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquie
 
 ## Contacto
 
-Si tienes preguntas o inquietudes sobre esta Política de Privacidad, no dudes en ponerte en contacto con nosotros a través de [tu dirección de contacto].
+Si tienes preguntas o inquietudes sobre esta Política de Privacidad, no dudes en ponerte en contacto con nosotros a través del correo electrónico andercc2880@gmail.com .
 
 Anderson Castaño
 20/10/2023
