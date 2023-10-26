@@ -49,6 +49,7 @@ const CompareTexts = () => {
 
 	return (
 		<div className='container mx-auto py-8 '>
+			<h1 className='font-bold text-white font-titles text-3xl'>Comparador de textos</h1>
 			<div className='grid grid-cols-2 gap-4'>
 				<div className='flex flex-col gap-2'>
 					<h2 className='text-lg font-bold mb-2 text-white'>
@@ -94,15 +95,15 @@ const CompareTexts = () => {
 				</div>
 			</div>
 			<div className='mt-4'>
-				<h2 className='text-lg font-bold mb-2 text-white'>
-					Comparación
-				</h2>
-				<div className='grid  rounded-xl bg-white'>
-					{/* {compareTexts()} */}
-					{text1 === text2
-						? 'Los textos son iguales'
-						: 'Los textos son diferentes'}
-				</div>
+				{text1 !== '' && text2 !== '' && (
+					<div className='p-3 bg-white text-background rounded-md'>
+						<p className='font-titles font-semibold text-md'>
+							{text1 === text2
+								? 'Los textos son iguales'
+								: 'Los textos son diferentes'}
+						</p>
+					</div>
+				)}
 			</div>
 		</div>
 	);

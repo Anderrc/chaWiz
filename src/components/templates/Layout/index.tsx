@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 import linkedin from '../../../assets/icons8-linkedin-48.png';
-import github  from '../../../assets/icons8-github-48.png';
+import github from '../../../assets/icons8-github-48.png';
 
 export const Layout = () => {
 	return (
@@ -26,7 +26,7 @@ export const Layout = () => {
 						<NavLink
 							to='/compare'
 							className='text-white font-bold font-titles no-underline hover:shadow-lg '>
-							Comparar
+							compare
 						</NavLink>
 					</li>
 				</nav>
@@ -36,28 +36,34 @@ export const Layout = () => {
 				<Outlet />
 			</main>
 
-			<footer className='bg-primary py-4'>
-				<div className='container justify-center mx-auto text-center text-gray-300'>
-					<p className='font-subtitle text-white'>
-						Desarrollado por Anderson Castaño{' '}
-					</p>
-					<p className='mx-auto w-[48px] h-[48px]'>
-						<a
-							href='https://www.linkedin.com/in/andercc/'
-							target='_blank'
-							rel='noopener noreferrer'>
-							<img src={linkedin} alt='Logo de red social' />
-						</a>
-					</p>
+			<footer className='bg-primary py-2'>
+				<div className='flex flex-row w-100 justify-center gap-2 align-middle'>
+					<span className='font-subtitle text-white'>
+						Develop by <b>Anderson Castaño</b>
+					</span>
+					<a
+						href='https://www.linkedin.com/in/andercc/'
+						target='_blank'
+						rel='noopener noreferrer'
+						className=' w-[28px] h-[28px]'>
+						<img
+							src={linkedin}
+							alt='Logo linkedin'
+							className='mx-auto w-[28px] h-[28px]'
+						/>
+					</a>
 
-					<p className='mx-auto w-[48px] h-[48px]'>
-						<a
-							href='https://github.com/Anderrc'
-							target='_blank'
-							rel='noopener noreferrer'>
-							<img src={github} alt='Logo de github' />
-						</a>
-					</p>
+					<a
+						href='https://github.com/Anderrc'
+						target='_blank'
+						rel='noopener noreferrer'
+						className=' w-[28px] h-[28px]'>
+						<img
+							src={github}
+							alt='Logo github'
+							className='w-[28px] h-[28px]'
+						/>
+					</a>
 				</div>
 			</footer>
 		</div>

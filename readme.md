@@ -1,26 +1,39 @@
-# Política de Privacidad de la Extensión ChaWiz
+# ChaWiz
 
-Esta Política de Privacidad describe cómo se recopila, utiliza y comparte la información cuando utilizas la extensión ChaWiz ("la Extensión").
+Chrome extension that count characters, words, compar texts, etc.
 
-## Recopilación y Uso de la Información
+## Features
 
-La Extensión ChaWiz no recopila, almacena ni procesa información personal de los usuarios. Su única función es contar caracteres y palabras, así como comparar textos. 
+-   Format JSONs
+-   Compare JSONs
+-   Add the option to insert auto-generated text in the conceptual menu
 
-## Almacenamiento de Datos
+## Installation
 
-La Extensión ChaWiz no almacena ningún tipo de información o datos en bases de datos internas o externas. Todo el procesamiento es local y se realiza en el dispositivo del usuario.
+**Option 1 (recommended)** – Install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/mkllcpiagoibjaapcbkoigbbblkmcked).
 
-## Compartir Información
+**Option 2** – Install it from source (see below).
 
-La Extensión ChaWiz no comparte ninguna información con terceros. Todos los datos procesados se mantienen en el dispositivo del usuario y no se transmiten a ninguna entidad externa.
+### Development
 
-## Cambios en la Política de Privacidad
+**Requirements:** [Node](https://nodejs.org/en/).
 
-Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Se recomienda revisar periódicamente esta página para estar al tanto de cualquier cambio. El uso continuado de la Extensión después de la publicación de los cambios en esta Política de Privacidad constituirá la aceptación de dichos cambios.
+**Initial setup:**
 
-## Contacto
+-   Clone repo
+-   Run `npm i` to get TypeScript typings for chrome
 
-Si tienes preguntas o inquietudes sobre esta Política de Privacidad, no dudes en ponerte en contacto con nosotros a través del correo electrónico andercc2880@gmail.com .
+**To build it:**
 
-Anderson Castaño
-20/10/2023
+-   Run `npm run build-1`
+
+**To build and rebuild whenever files change:**
+
+-   Run `npm run dev`
+
+**To install your local build to Chrome**
+
+-   Open Chrome and go to `chrome://extensions`
+-   Enable "Developer mode",
+-   Click "Load unpacked",
+-   Select the `dist` folder you built above.
