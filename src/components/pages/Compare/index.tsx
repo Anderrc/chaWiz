@@ -48,8 +48,10 @@ const CompareTexts = () => {
 	// };
 
 	return (
-		<div className='container mx-auto py-8 '>
-			<h1 className='font-bold text-white font-titles text-3xl'>Comparador de textos</h1>
+		<div className='container mx-auto '>
+			<h1 className='font-bold text-white font-titles text-3xl'>
+				Compare Text
+			</h1>
 			<div className='grid grid-cols-2 gap-4'>
 				<div className='flex flex-col gap-2'>
 					<h2 className='text-lg font-bold mb-2 text-white'>

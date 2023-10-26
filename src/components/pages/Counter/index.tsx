@@ -44,6 +44,9 @@ export default function Counter() {
 
 	return (
 		<div className=''>
+			<h1 className='font-bold text-white font-titles text-3xl'>
+				Counter
+			</h1>
 			<textarea
 				name='content'
 				id=''
