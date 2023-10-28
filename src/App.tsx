@@ -5,7 +5,6 @@ import Counter from './components/pages/Counter';
 
 function App() {
 	return (
-		// <Layout>
 		<div>
 			<Routes>
 				<Route path='/' element={<Layout />}>
@@ -16,7 +15,6 @@ function App() {
 				</Route>
 			</Routes>
 		</div>
-		// </Layout>
 	);
 }
 

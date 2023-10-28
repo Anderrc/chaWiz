@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useStoreLocal } from '../../../shared/hooks/useStoreLocal';
 
 export default function Counter() {
 	const [cantWords, setCantWords] = useState(0);
@@ -6,6 +7,7 @@ export default function Counter() {
 	const [cantSpaces, setCantSpaces] = useState(0);
 	const [cantWhitSpaces, setCantWhitSpaces] = useState(0);
 	const content = useRef<any | null>();
+	const { getStore, setStore } = useStoreLocal();
 
 	const handleCountWords = () => {
 		if (content.current === null) {
@@ -17,30 +19,54 @@ export default function Counter() {
 				(word: string) => word !== '' && word !== '\n' && word !== ' ',
 			);
 		setCantWords(arrayWords.length);
+		setStore('cantWords', arrayWords.length);
+		setStore('content', content.current.value);
 	};
 
 	const handleCountCharacters = () => {
 		if (content.current === null) {
 			return;
 		}
-		content.current &&
+		if (content.current) {
 			setCantCharacters(content.current.value.replace(/\s/g, '').length);
+			setStore(
+				'cantCharacters',
+				content.current.value.replace(/\s/g, '').length,
+			);
+			setStore('content', content.current.value);
+		}
 	};
 
 	const handleCountCharactersWhitSpaces = () => {
 		if (content.current === null) {
 			return;
 		}
-		content.current && setCantWhitSpaces(content.current.value.length);
+		if (content.current) {
+			setCantWhitSpaces(content.current.value.length);
+			setStore('cantWhitSpaces', content.current.value.length);
+			setStore('content', content.current.value);
+		}
 	};
 
 	const handleCountSpaces = () => {
 		if (content.current === null) {
 			return;
 		}
-		content.current &&
+		if (content.current) {
 			setCantSpaces(content.current.value.split(' ').length - 1);
+			setStore('cantSpaces', content.current.value.split(' ').length - 1);
+			setStore('content', content.current.value);
+		}
 	};
+
+	useEffect(() => {
+		getStore('cantSpaces');
+		setCantSpaces(getStore('cantSpaces'));
+		setCantWhitSpaces(getStore('cantWhitSpaces'));
+		setCantCharacters(getStore('cantCharacters'));
+		setCantWords(getStore('cantWords'));
+		content.current.value = getStore('content');
+	}, []);
 
 	return (
 		<div className=''>

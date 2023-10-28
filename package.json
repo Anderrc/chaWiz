@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build ",
-    "build-1": "tsc && vite build && node generateManifest.js && start http://reload.extensions",
+    "build": "tsc && vite build && node generateManifest.js && start http://reload.extensions",
+    "build-prod": "tsc && vite build && node generateManifest.js && start http://reload.extensions && compress.bat",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -21,7 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
-    "sort-by": "^1.2.0"
+    "sort-by": "^0.0.2"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.246",
