@@ -17,10 +17,7 @@ const manifest = {
   },
   "action": {
     "default_popup": "./index.html"
-  },
-  "background": {
-    "service_worker": "./contextMenu.js"
-  },
+  }
 };
 
 createTextFile(manifest, './dist/manifest.json');
