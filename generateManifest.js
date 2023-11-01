@@ -9,7 +9,7 @@ function createTextFile(content, fileName) {
 const manifest = {
   "manifest_version": 3,
   "name": "ChaWiz",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Optimiza tu flujo con ChaWiz para tareas de manejo de caracteres. Desarrollador, escritor o editor, mejora eficiencia y calidad.",
   "permissions": [],
   "icons": {
