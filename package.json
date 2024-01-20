@@ -8,7 +8,8 @@
     "build": "tsc && vite build && node generateManifest.js && start http://reload.extensions",
     "build-prod": "tsc && vite build && node generateManifest.js && start http://reload.extensions && compress.bat",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pr":"echo 1"
   },
   "dependencies": {
     "@rollup/plugin-replace": "^5.0.4",
